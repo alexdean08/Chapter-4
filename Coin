@@ -1,0 +1,57 @@
+/*******************************************************************
+ * This represents a coin object
+ * 
+ * @author Alex Dean
+ * @version October 2, 2017
+ *******************************************************************/
+public class Coin
+{
+    public static final int HEADS = 0;
+    public static final int TAILS = 1;
+    private int face; //instance variable, each coin object will have
+                      //it's own copy.  Constaines 'heads' or 'tails'.
+    /**
+     * constructor method.  Called when new Coin() is executed.  Name is the same as class
+     **/
+    public Coin ()
+    {
+        flip(); // invokes, or calls, the method flip()
+    }
+
+    /**
+     * Flips the coin by randomly choosing a face.
+     * Simulates a coin flipping
+     * return type is void.  No info is passed back
+     **/
+    public void flip() //this is the method header, no ; after header
+    {
+        face = (int) (Math.random() * 2); //generates 0 or 1
+    }
+
+    /**
+     * Returns true if the current face of the coin is heads.
+     * False if it doesn't
+     * @return true or false
+     **/
+    public boolean isHeads()
+    {
+        return (face == HEADS);
+    }
+
+    /**
+     * Returns a string representation of the coin object
+     * Every class you write should have a toString() method.
+     * @return string representation of a coin object
+     **/
+    public String toString()
+    {
+        String faceName; //local variable, only exists in method
+                         //will be deleted when this is finished
+        if (isHeads())
+
+            faceName = "Heads";
+        else
+            faceName = "Tails";
+        return faceName;
+    }
+}
