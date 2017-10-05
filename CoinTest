@@ -1,0 +1,32 @@
+/**
+ * This flips a coin 100 times and tells you the output
+ * 
+ * @author Alex Dean
+ * @version October 2, 2017
+ */
+public class CoinTest
+{
+    public static void main (String[] args)
+    {
+        final int FLIPS = 100; // number of coin flips
+        int currentRun = 0; // length of the current run of HEADS
+        int maxRun = 0; // length of the maximum run so far
+        Coin c = new Coin();
+        System.out.print("\f");
+        for (int i = 0; i < FLIPS; i++)
+        {
+           c.flip();
+           System.out.println(c.toString());
+           if(c.isHeads()){
+               currentRun++;
+               if(currentRun > maxRun){
+                   maxRun = currentRun;
+                }
+           }
+           else{
+                currentRun = 0;
+           }
+        }
+        System.out.println("The max run of heads was " + maxRun);
+    }
+}
