@@ -1,0 +1,34 @@
+import java.util.Scanner;
+/**
+ * This creates 2 band boosters and lets you add things to them
+ * 
+ * @author Alex Dean
+ * @version October 21, 2017
+ */
+
+public class BandTest {
+	public static void main (String [] args){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter the name of the band booster: ");
+		BandBooster b1 = new BandBooster(scan.nextLine());
+		System.out.println("Please enter the name of the band booster: ");
+		BandBooster b2 = new BandBooster(scan.nextLine());
+	    
+		System.out.println("Enter the amount of boxes sold by " + b1.getName() + " for week 1: ");
+		b1.updateSales(scan.nextInt());
+		System.out.println("Enter the amount of boxes sold by " + b1.getName() + " for week 2: ");
+		b1.updateSales(scan.nextInt());
+		System.out.println("Enter the amount of boxes sold by " + b1.getName() + " for week 3: ");
+		b1.updateSales(scan.nextInt());
+		
+		System.out.println("Enter the amount of boxes sold by " + b2.getName() + " for week 1: ");
+		b2.updateSales(scan.nextInt());
+		System.out.println("Enter the amount of boxes sold by " + b2.getName() + " for week 2: ");
+		b2.updateSales(scan.nextInt());
+		System.out.println("Enter the amount of boxes sold by " + b2.getName() + " for week 3: ");
+		b2.updateSales(scan.nextInt());
+		
+		System.out.println(b1);
+		System.out.println(b2);
+	}
+}
