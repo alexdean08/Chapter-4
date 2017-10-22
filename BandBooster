@@ -1,0 +1,49 @@
+/**
+ * This is the ban booster object class
+ * 
+ * @author Alex Dean
+ *
+ */
+
+public class BandBooster {
+	private String name = "";
+	private int boxesSold = 0;
+
+	/**
+	 * This creates the band booster object
+	 * 
+	 * @param n the name of the band booster
+	 */
+	public BandBooster(String n){
+		name = n;
+		boxesSold = 0;
+	}
+	
+	/**
+	 * This getse the name of the band booster
+	 * 
+	 * @return name the name of the band booster
+	 */
+	public String getName(){
+		return name;
+	}
+	
+	/**
+	 * this updates the sales of the band booster
+	 * 
+	 * @param add the amount sold in after the previous sales update
+	 */
+	public void updateSales(int add){
+		boxesSold += add;
+	}
+	
+	/**
+	 * This converts all the information into a String and returns it back
+	 * 
+	 * @return the information about the band booster
+	 */
+	public String toString(){
+		return name + ":  " + boxesSold + " boxes sold";
+	}
+
+}
